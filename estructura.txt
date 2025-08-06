@@ -1,0 +1,22 @@
+Folder PATH listing
+Volume serial number is 9886-017B
+C:.
+|   estructura.txt
+|   
+\---assets
+    \---app
+        +---css
+        |       index.css
+        |       validado.css
+        |       
+        +---img
+        |       avatar-gdc81455e8_1280.png
+        |       
+        +---php
+        |       conexion.php
+        |       Validacion.php
+        |       
+        \---public
+                index.html
+                validado.html
+                

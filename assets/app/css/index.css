@@ -1,0 +1,183 @@
+ * {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Contenedor principal que envuelve todo el contenido */
+.main-container {
+    width: 100%;
+    /* max-width: 1200px; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor secundario que utiliza CSS Grid para el diseño */
+.containerS {
+    width: 100%;
+    min-height: 100vh;
+ 
+    display: grid;
+    grid-template-areas:
+        "texto login"
+        "footer footer";
+    grid-template-rows: minmax(0, 1fr) auto;
+    
+    grid-template-columns: 60% 40%;
+    gap: 0;
+}
+
+/* Contenedor izquierdo con imagen de fondo */
+.left-container {
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 25px;  
+    grid-area: texto;
+    padding: 20px;
+    background-image: url('../img/principal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+    border-radius: 5px;
+}
+
+.left-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
+}
+
+/* Contenedor derecho para el formulario de inicio de sesión */
+.right-container {
+    grid-area: login;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0px;
+    height: 100%;
+}
+
+/* Contenedor del formulario de inicio de sesión */
+.sub-container {
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Estilo de los campos de entrada de correo y contraseña */
+.email, .password {
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 9px;
+    color: #333;
+    font-weight: bold;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.email:hover, .password:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo del botón de envío */
+.submit-button {
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #5a7df4;
+}
+
+/* Estilo del footer */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+/* Estilo del mensaje de error */
+.error-message {
+    background-color: #ffebee; 
+    color: #d32f2f; 
+    padding: 15px;
+    margin: 20px auto;
+    border-left: 5px solid #d32f2f; 
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error-message h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
